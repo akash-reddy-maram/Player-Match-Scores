@@ -1,4 +1,4 @@
-GET http://localhost:3000/players/1/playerScores
+GET http://localhost:3000/players/3/playerScores/
 ###
 PUT http://localhost:3000/players/2/
 Content-Type: application/json

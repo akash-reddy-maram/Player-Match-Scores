@@ -107,8 +107,8 @@ app.get("/players/:playerId/playerScores", async (request, response) => {
     player_details.player_id,
     player_details.player_name,
     sum(score),
-    count(fours),
-    count(sixes)
+    sum(fours),
+    sum(sixes)
     FROM player_match_score INNER JOIN player_details 
     ON
     player_details.player_id=player_match_score.player_id
@@ -119,8 +119,8 @@ app.get("/players/:playerId/playerScores", async (request, response) => {
     playerId: playerStats.player_id,
     playerName: playerStats.player_name,
     totalScore: playerStats["sum(score)"],
-    totalFours: playerStats["count(fours)"],
-    totalSixes: playerStats["count(sixes)"],
+    totalFours: playerStats["sum(fours)"],
+    totalSixes: playerStats["sum(sixes)"],
   });
 });
 
