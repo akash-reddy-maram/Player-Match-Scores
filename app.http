@@ -1,0 +1,8 @@
+GET http://localhost:3000/players/1/playerScores
+###
+PUT http://localhost:3000/players/2/
+Content-Type: application/json
+
+{
+  "playerName": "Akash"
+}
